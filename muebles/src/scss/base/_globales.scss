@@ -1,0 +1,81 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::after, *::before {
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    color: v.$negro;
+}
+p {
+    font-family: v.$fuentePrincipal;
+    line-height: 1.4;
+}
+.contenedor-nav {
+    max-width: 99%;
+    width: 100%;
+    margin: 0 auto;
+    @include m.tablet {
+        max-width: 90%;
+    }
+    @include m.desktop {
+        max-width: 80%;
+    }
+}
+.contenedor {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.contenedor-entrada {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    font-family: v.$fuenteSecundaria;
+    padding: 2rem 0;
+}
+h1 {
+    font-size: 3rem;
+
+    @include m.tablet {
+        font-size: 4rem;
+    }
+}
+h2 {
+    font-size: 2rem;
+    @include m.tablet {
+        font-size: 3rem;
+    }
+}
+img {
+    width: 100%;
+    display: block;
+}
+.btn {
+    cursor: pointer;
+    border-radius: .5rem;
+    display: block;
+    background-color: v.$verde;
+    padding: 1rem;
+    color: v.$blanco;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: background-color .5s ease;
+    text-align: center;
+    @include m.tablet {
+        font-size: 1.8rem;
+    }
+    &:hover {
+        background-color: v.$verdeOscuro;
+    }
+}
+.max-width-30 {
+    max-width: 30rem;
+    width: 100%;
+}

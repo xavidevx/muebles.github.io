@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include m.grid(2);
+    @include m.tablet {
+        @include m.grid(3);
+    };
+};
+.galeria img {
+    height: 10rem;
+    width: 40rem;
+    object-fit: cover;
+    width: 100%;
+    @include m.tablet {
+        height: 20rem;
+        
+    }
+    @include m.desktop {
+        height: 40rem;
+        
+    }
+};

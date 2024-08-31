@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.categorias {
+    margin-top: 3rem;
+    @include m.tablet {
+        margin-top: 5rem;
+    }
+    h2 {
+        text-align: center;
+    }
+    .categoria {
+        margin-bottom: 2rem;
+        img {
+            width: 100%;
+            object-fit: cover;
+            display: block
+        }
+        a {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color .5s ease;
+            margin: 0;
+            padding: 1.5rem;
+            font-size: 2rem;
+            &:hover {
+                background-color: v.$azul;
+                color: v.$blanco;
+            }
+            @include m.tablet {
+            }
+        }
+    }
+}
+.listado-categoria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @include m.tablet {
+        @include m.grid( 3 )
+    }
+}

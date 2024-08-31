@@ -1,0 +1,20 @@
+{
+  "name": "muebles",
+  "version": "1.0.0",
+  "description": "Cración de ecommerce de muebles",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "3xamp5ql"
+  ],
+  "author": "Xavier Developer",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8"
+  }
+}

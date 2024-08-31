@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.formulario {
+    fieldset {
+        border: 1px solid v.$negro;
+        margin-bottom: 2rem;
+    }
+    legend {
+        background: v.$azul;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        color: v.$blanco;
+        font-weight: bold;
+        margin-bottom: 4rem;
+    }
+    .campo {
+        display: flex;
+        margin-bottom: 2rem;
+        label {
+            font-size: 1.3rem;
+            flex-basis: 10rem;
+        }
+    }
+    input:not([type="radio"]),
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid v.$grisClaro;
+        padding: 1rem;
+    }
+}
